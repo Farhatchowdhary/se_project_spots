@@ -1,0 +1,13 @@
+.footer {
+ 
+  flex-shrink: 0;
+  padding: 67px 0 60px;
+  background-color: #fcf5e5;
+}
+
+
+.footer__copyright {
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 668px;
+}
