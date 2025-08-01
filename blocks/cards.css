@@ -9,7 +9,7 @@
   grid-template-columns: repeat(auto-fit, 413px);
   grid-gap: 20px 40px;
   max-height: fit-content;
-  font-family: "poppins";
+  font-family: "poppins",Arial, Helvetica, sans-serif;
   padding: 0;
 }
 
