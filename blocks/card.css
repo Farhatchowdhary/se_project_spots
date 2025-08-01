@@ -18,8 +18,7 @@
 .card__title {
   width: 119px;
   height: 24px;
-  top: 425px;
-  font: "poppins";
+  font: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 20px;
   font-style: medium;
@@ -36,8 +35,6 @@
   height: 20px;
   border: none;
   background: transparent url(../images/heart.png) center no-repeat;
-  top: 425px;
-  left: 390px;
   opacity: 40%;
 }
 
@@ -48,12 +45,17 @@
 .card__image {
   max-height: 413px;
   max-width: 413px;
-  border-radius: 16px 16px 16px 16px;
+  border-radius: 16px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 620px) {
   .card__image {
     height: 288px;
     width: 288px;
+  }
+
+  .card__title {
+    font-size: 20px;
   }
 }

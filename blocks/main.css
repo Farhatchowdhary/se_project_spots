@@ -4,8 +4,6 @@
   background-color: #fcf5e5;
 }
 .main__content {
-  justify-content: center;
-  top: 80px;
   bottom: 20px;
   padding: 0 8px;
 }

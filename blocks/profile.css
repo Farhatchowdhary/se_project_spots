@@ -28,7 +28,7 @@
   border: none;
   border-radius: 8px;
   padding: 18px 24px 18px 52px;
-  font-family: "Poppins",Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: #fff;
   margin-left: auto;
@@ -63,7 +63,7 @@
   color: #212121;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: "Poppins",Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
 
@@ -77,19 +77,19 @@
   margin-bottom: 115px;
   font-size: 16px;
   opacity: 70%;
-  font-family: "poppins",Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   width: 97px;
 }
 
 .profile__edit-button {
   border: none;
-  background-color: #fcf5e5;
   width: 130px;
-  background: url("../images/Group2.svg") 1px center no-repeat #fcf5e5;
+  background: url("../images/Group2.svg") transparent 1px center no-repeat
+    #fcf5e5;
   gap: 8px;
   border-radius: 90px;
   height: 16px;
-  font-family: "poppins", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .profile__edit-button:hover {
