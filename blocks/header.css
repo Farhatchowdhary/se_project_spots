@@ -1,10 +1,12 @@
-.header {
-  align-items: center;
+.header__header {
   display: flex;
   background-color: white;
   justify-content: center;
-  width: 1,440px;
-  height: 46px;
-  border-bottom: 1px;
   color: #ffffff 80%;
+  margin-bottom: 20px;
+}
+
+.header__logo {
+  width: 94px;
+  height: 46px;
 }

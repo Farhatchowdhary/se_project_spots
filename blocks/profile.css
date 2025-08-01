@@ -1,0 +1,145 @@
+.profile__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.profile__description {
+  top: 80px;
+  left: 80px;
+  border-bottom: 1px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0 30px;
+}
+
+.profile__picture {
+  width: 199px;
+  height: 199px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.profile__post-button {
+  background: url("../images/plus.svg") 32px center no-repeat #212121;
+  background-size: 12px;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 24px 18px 52px;
+  font-family: "Poppins";
+  font-weight: 400;
+  color: #fff;
+  margin-left: auto;
+  height: 52px;
+  margin-top: auto;
+}
+
+.profile__post-button:hover {
+  opacity: 0.5;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__container {
+  display: flex;
+  gap: 20px;
+  color: #212121;
+  margin-top: 20px;
+  margin-left: 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #21212166;
+}
+
+.profile__title {
+  font-weight: 500;
+  font-style: medium;
+  font-size: 32px;
+  line-height: 100%;
+  color: #212121;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+.profile__subtitle {
+  height: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  color: #212121;
+  margin-top: 8px;
+  margin-bottom: 115px;
+  font-size: 16px;
+  opacity: 70%;
+  font-family: "poppins";
+  width: 97px;
+}
+
+.profile__edit-button {
+  border: none;
+  background-color: #fcf5e5;
+  width: 130px;
+  background: url("../images/Group2.svg") 1px center no-repeat #fcf5e5;
+  gap: 8px;
+  border-radius: 90px;
+  height: 16px;
+  font-family: "poppins";
+}
+
+.profile__edit-button:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 755px) {
+  .profile__picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+
+  .profile__title {
+    font-size: 20px;
+    font-style: medium;
+    font-weight: 500;
+    line-height: 100%;
+    height: 20px;
+    align-items: center;
+  }
+
+  .profile__container {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 10px;
+    align-items: center;
+  }
+
+  .profile__description {
+    align-items: center;
+  }
+
+  .profile__button {
+    align-items: center;
+  }
+
+  .profile__subtitle {
+    margin-bottom: 32px;
+    font-size: 21px;
+    font-size: medium;
+  }
+
+  .profile__post-button {
+    width: 288px;
+    height: 52px;
+    border-radius: 8px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 32px;
+    margin-left: unset;
+  }
+}

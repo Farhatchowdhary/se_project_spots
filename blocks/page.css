@@ -1,0 +1,14 @@
+.page {
+  background-color: #fcf5e5;
+  min-height: 100vh;
+  margin: 0px;
+  width: 100%;
+}
+
+.page__section {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  position: relative;
+  box-sizing: border-box;
+}

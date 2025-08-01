@@ -2,20 +2,20 @@
 @import "../vendor/font.css";
 @import url("../blocks/card.css");
 @import url("../blocks/header.css");
-@import url("../blocks/section.css");
+@import url("../blocks/profile.css");
 @import url("../blocks/main.css");
 @import url("../blocks/page.css");
 @import url("../blocks/footer.css");
 @import url("../blocks/cards.css");
-/* .nav__link {
-  width: hug (107.34px);
-  height: hug (16px);
-  gap: 8px;
-  opacity: 70%;
-} */
 
-/* @media screen and (max-width: 320px){
-  .header{
-    width:10px
-  }
-} */
+
+/* 
+TODO:
+- style the profile description accoring to figma
+- add the top ad bottom border the cards section
+- style the fonts from figma 
+Mobile view
+- center the edit profile button on mobile view
+- center the cards
+- center the new post button
+*/

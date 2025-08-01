@@ -18,123 +18,116 @@
   </head>
   <body>
     <div class="page">
-      <header class="header">
-        <img class="logo" src="./images/Logo.svg" alt="spots logo" />
+      <header class="header__header">
+        <img class="header__logo" src="./images/Logo.svg" alt="spots logo" />
       </header>
-    </div>
-<main class="main">
-    <main class="main__content">
-      <section class="section">
-      <section class="section__profile">
-        <div class="section__container">
-          <img
-            class="picture"
-            src="./images/avatar.jpg"
-            alt="image of a bessie coleman"
-            width="190"
-            height="190"
-          />
 
-          <div class="section__information">
-            <div class="section__description">
-              <h1 class="section__title">Bessie Coleman</h1>
+      <main class="main">
+        <section class="main__content">
+          <section class="profile page__section">
+            <div class="profile__container">
+              <img
+                class="profile__picture"
+                src="./images/avatar.jpg"
+                alt="image of a bessie coleman"
+                width="190"
+                height="190"
+              />
 
-              <h3 class="section__subtitle">Civil Aviator</h3>
+              <div class="profile__information">
+                <div class="profile__description">
+                  <h1 class="profile__title">Bessie Coleman</h1>
+                  <h3 class="profile__subtitle">Civil Aviator</h3>
 
-              <button class="profile">
+                  <button class="profile__edit-button">Edit Profile</button>
+                </div>
+              </div>
+              <button class="profile__post-button">New Post</button>
+            </div>
+          </section>
+          <section class="cards">
+            <ul class="cards__list">
+              <li class="card">
                 <img
-                  class="profile__edit-image"
-                  src="./images/Group2.svg"
-                  alt="image of a pen logo"
+                  class="card__image"
+                  src="./images/val-thorens.jpg"
+                  alt="picture of a hut"
                 />
-                Edit Profile
-              </button>
-            </div>
-          </div>
-        </div>
-        <button class="section__button">+ New Post</button>
-      </section>
+                <div class="card__description">
+                  <h2 class="card__title">Val Thorens</h2>
+                  <button class="card__like-button" type="button"></button>
+                </div>
+              </li>
 
-<main class="cards">
-      <section class="cards__section">
-        <ul class="cards__list">
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/val-thorens.jpg"
-              alt="picture of a hut"
-            />
-            <div class="card__description">
-              <h2 class="card__title">Val Thorens</h2>
-              <button class="card__like-button" type="button"></button>
-            </div>
-          </li>
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/restaurant.jpg"
+                  alt="picture of a restaurant"
+                />
+                <div class="card__description">
+                  <h2 class="card__title">Restaurant Terrace</h2>
+                  <button class="card__like-button" type="button"></button>
+                </div>
+              </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/restaurant.jpg"
-              alt="picture of a restaurant"
-            />
-            <div class="card__description">
-              <h2 class="card__title">Restaurant Terrace</h2>
-              <button class="card__like-button" type="button"></button>
-            </div>
-          </li>
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/an-outdoor-cafe.jpg"
+                  alt="picture of outdoor cafe"
+                />
+                <div class="card__description">
+                  <h2 class="card__title">An outdoor cafe</h2>
+                  <button class="card__like-button" type="button"></button>
+                </div>
+              </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/an-outdoor-cafe.jpg"
-              alt="picture of outdoor cafe"
-            />
-            <div class="card__description">
-              <h2 class="card__title">An outdoor cafe</h2>
-              <button class="card__like-button" type="button"></button>
-            </div>
-          </li>
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/a-very-long-bridge.jpg"
+                  alt="picture of  long bridge"
+                />
+                <div class="card__description">
+                  <h2 class="card__title">
+                    A very long bridge over the forest
+                  </h2>
+                  <button class="card__like-button" type="button"></button>
+                </div>
+              </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/a-very-long-bridge.jpg"
-              alt="picture of  long bridge"
-            />
-            <div class="card__description">
-              <h2 class="card__title">A very long bridge over the forest</h2>
-              <button class="card__like-button" type="button"></button>
-            </div>
-          </li>
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/tunnel.jpg"
+                  alt="picture of a tunnel"
+                />
+                <div class="card__description">
+                  <h2 class="card__title">Tunnel with morning light</h2>
+                  <button class="card__like-button" type="button"></button>
+                </div>
+              </li>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/tunnel.jpg"
-              alt="picture of a tunnel"
-            />
-            <div class="card__description">
-              <h2 class="card__title">Tunnel with morning light</h2>
-              <button class="card__like-button" type="button"></button>
-            </div>
-          </li>
+              <li class="card">
+                <img
+                  class="card__image"
+                  src="./images/mountain.jpg"
+                  alt="picture of a mountain"
+                />
+                <div class="card__description">
+                  <h2 class="card__title">Mountain house</h2>
+                  <button class="card__like-button" type="button"></button>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </main>
 
-          <li class="card">
-            <img
-              class="card__image"
-              src="./images/mountain.jpg"
-              alt="picture of a mountain"
-            />
-            <div class="card__description">
-              <h2 class="card__title">Mountain house</h2>
-              <button class="card__like-button" type="button"></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
-
-    <footer class="footer page__section">
-      <p class="footer__copyright">&copy;2023 Spots</p>
-    </footer>
+      <footer class="footer__page">
+        <p class="footer__copyright">2023 © Spots</p>
+      </footer>
+    </div>
   </body>
 </html>

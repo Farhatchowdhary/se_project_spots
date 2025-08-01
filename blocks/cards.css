@@ -1,8 +1,22 @@
+.cards {
+  border-bottom: 1px solid #21212166;
+}
+
 .cards__list {
   display: grid;
+  flex-direction: column;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 413px);
   grid-gap: 20px 40px;
+  max-height: fit-content;
+  font-family: "poppins";
   padding: 0;
-  margin: 47px 0 0;
+}
+
+@media screen and (max-width: 620px) {
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, 288px);
+    padding: 0;
+    flex-direction: column;
+  }
 }

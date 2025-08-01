@@ -1,13 +1,28 @@
 .footer {
- 
   flex-shrink: 0;
   padding: 67px 0 60px;
   background-color: #fcf5e5;
 }
 
+.footer__page {
+  width: 100vw;
+  height: auto;
+  background-color: #fcf5e5;
+}
 
 .footer__copyright {
   font-size: 18px;
   line-height: 22px;
-  margin-left: 668px;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-bottom: 60px;
+  height: auto;
+}
+
+@media screen and (max-width: 630px) {
+  .footer__copyright {
+    text-align: center;
+  }
 }

@@ -1,4 +1,18 @@
-
-.main__content {
+.main {
+  width: 100%;
+  height: auto;
   background-color: #fcf5e5;
+}
+.main__content {
+  justify-content: center;
+  top: 80px;
+  bottom: 20px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 620px) {
+  .main__content {
+    justify-content: center;
+    margin: 20px 20px;
+  }
 }
