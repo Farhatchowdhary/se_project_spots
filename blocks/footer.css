@@ -1,5 +1,4 @@
 .footer {
-  width: 100vw;
   height: auto;
   background-color: #fcf5e5;
 }
@@ -10,7 +9,6 @@
   display: flex;
   justify-content: center;
   margin-top: 60px;
-  margin-bottom: 60px;
   margin-bottom: 60px;
   height: auto;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
