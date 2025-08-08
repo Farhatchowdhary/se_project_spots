@@ -1,6 +1,4 @@
 .modal__container {
-  width: 730px;
-  height: 408px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -12,6 +10,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   z-index: -1;
   transform: translate(-50%, -50%);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__close-button {
@@ -20,7 +19,6 @@
   right: 10px;
   background: none;
   border: none;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 40px;
   cursor: pointer;
   color: #212121;
@@ -59,7 +57,6 @@
   color: #212121;
   max-width: 169px;
   max-height: 32px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 32px;
@@ -76,7 +73,6 @@
   padding: 16px 12px;
   gap: 10px;
   border: 1px solid #212121;
-  font-family: "Poppins, Arial, Helvetica, sans-serif";
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -89,7 +85,6 @@
   justify-content: space-evenly;
   width: 49px;
   height: 18px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
@@ -105,7 +100,6 @@
   justify-content: flex-end;
   width: 92px;
   height: 18px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
@@ -115,7 +109,6 @@
 }
 
 .modal__input::placeholder {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   max-width: 163px;
   max-height: 20px;
   font-weight: 500;
@@ -178,9 +171,9 @@
   }
 }
 
+/* This is for the New Post pop up form */
+
 .modal__container {
-  width: 730px;
-  height: 408px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -191,6 +184,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__close-btn {
@@ -200,7 +194,6 @@
   background: none;
   border: none;
   font-size: 40px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   cursor: pointer;
   color: #212121;
   transition: color 0.3s;
@@ -238,7 +231,6 @@
   color: #212121;
   max-width: 169px;
   max-height: 32px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   top: 236px;
   left: 405px;
@@ -256,7 +248,6 @@
   padding: 16px 12px;
   gap: 10px;
   border: 1px solid #212121;
-  font-family: "Poppins, Arial, Helvetica, sans-serif";
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -269,7 +260,6 @@
   justify-content: space-evenly;
   width: 85px;
   height: 18px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
@@ -285,7 +275,6 @@
   justify-content: flex-end;
   width: 65px;
   height: 18px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 16px;
@@ -295,7 +284,6 @@
 }
 
 .modal__input::placeholder {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   max-width: 163px;
   max-height: 20px;
   font-weight: 500;

@@ -1,10 +1,9 @@
 function openProfileModal() { 
-  // change that to id in the future
-  document.querySelector('.modal__container').classList.add('modalisopened');
-  //  document.querySelector('.formLogin').classList.add('showformlogin');
+  document.querySelector('#editModal').classList.add('modalisopened');
+
 }
 function closeProfileModal() {
-   document.querySelector('.modal__container').classList.remove('modalisopened');
+   document.querySelector('#editModal').classList.remove('modalisopened');
   
 }
 const editProfileButton  = document.querySelector(".profile__edit-button")
@@ -12,14 +11,14 @@ const editProfileButton  = document.querySelector(".profile__edit-button")
 editProfileButton.addEventListener("click", openProfileModal)
 
 
-const modalCloseButton  = document.querySelector(".modal__close-button")
+const modalCloseButton  = document.querySelector("#editModal .modal__close-button")
 
 modalCloseButton.addEventListener("click", closeProfileModal)
 
 
 function openPostModal() {
   document.querySelector('#postModal').classList.add('modalisopened');
-  // document.querySelector('#postModal .formLogin').classList.add('showformlogin');
+  
 }
 
 function closePostModal() {
