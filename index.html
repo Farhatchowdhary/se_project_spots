@@ -123,11 +123,72 @@
             </ul>
           </section>
         </section>
-      </main>
 
-      <footer class="footer">
-        <p class="footer__copyright">2023 © Spots</p>
-      </footer>
+        <div class="modal" id="editModal">
+          <div class="modal__container">
+            <form action="#" method="get" class="formlogin">
+              <button class="modal__close-button" type="button">&times;</button>
+              <h2 class="modal__title">Edit Profile</h2>
+
+              <label class="modal__name" for="title">Name</label>
+              <input
+                class="modal__label"
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Bessie Coleman"
+                required
+              />
+
+              <label class="modal__description" for="subtitle"
+                >Description</label
+              >
+              <input
+                class="modal__label"
+                type="text"
+                id="subtitle"
+                name="subtitle"
+                placeholder="Civil Aviator"
+                required
+              />
+              <button class="modal__save-button" type="submit">Save</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="modal" id="postModal">
+          <div class="modal__container">
+            <form action="#" method="get" class="formLogin">
+              <button class="modal__close-btn" type="button">&times;</button>
+              <h2 class="modal__title">New Post</h2>
+
+              <label class="modal__image" for="title">Image link</label>
+              <input
+                class="modal__label"
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Paste link to the picture"
+                required
+              />
+              <label class="modal__caption" for="subtitle">Caption</label>
+              <input
+                class="modal__label"
+                type="text"
+                id="subtitle"
+                name="subtitle"
+                placeholder="Type your caption"
+                required
+              />
+              <button class="modal__save-button" type="submit">Save</button>
+            </form>
+          </div>
+        </div>
+        <footer class="footer">
+          <p class="footer__copyright">2023 © Spots</p>
+        </footer>
+      </main>
     </div>
+    <script src="./pages/index.js"></script>
   </body>
 </html>

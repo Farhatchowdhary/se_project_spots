@@ -7,15 +7,6 @@
 @import url("../blocks/page.css");
 @import url("../blocks/footer.css");
 @import url("../blocks/cards.css");
+@import url("../blocks/modal.css");
 
 
-/* 
-TODO:
-- style the profile description accoring to figma
-- add the top ad bottom border the cards section
-- style the fonts from figma 
-Mobile view
-- center the edit profile button on mobile view
-- center the cards
-- center the new post button
-*/

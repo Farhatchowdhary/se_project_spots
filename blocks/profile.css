@@ -84,8 +84,8 @@
 .profile__edit-button {
   border: none;
   width: 130px;
-  background: url("../images/Group2.svg") transparent 1px center no-repeat
-    #fcf5e5;
+  background: url("../images/Group2.svg") transparent 1px center no-repeat;
+  background-color: #fcf5e5;
   gap: 8px;
   border-radius: 90px;
   height: 16px;
