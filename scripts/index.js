@@ -1,3 +1,44 @@
+const initialCards = [
+  {
+    name: "Val Thorens",
+    link: "./images/val-thorens.jpg",
+    alt: "picture of a hut"
+  },
+
+  {
+    name: "Restaurant Terrace",
+    link: "./images/restaurant.jpg",
+    alt: "picture of a restaurant"
+  },
+  {
+    name: "An outdoor cafe",
+    link: "./images/an-outdoor-cafe.jpg",
+    alt: "picture of outdoor cafe"
+  },
+  {
+    name: "A very long bridge over the forest",
+    link: "./images/a-very-long-bridge.jpg",
+    alt: "picture of long bridge"
+  },
+  {
+    name: "Tunnel with morning light",
+    link: "./images/tunnel.jpg",
+    alt: "picture of a tunnel"
+  },
+  {
+    name: "Mountain house",
+    link: "./images/mountain.jpg",
+    alt: "picture of a mountain"
+  }
+];
+
+initialCards.forEach(card => {
+  console.log(card.name);
+  console.log(card.link);
+});
+
+
+
 function openProfileModal() { 
   document.querySelector('#editModal').classList.add('modalisopened');
 
