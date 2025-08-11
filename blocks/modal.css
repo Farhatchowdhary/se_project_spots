@@ -29,6 +29,8 @@
   margin-top: 15px;
   margin-right: 20px;
   opacity: 40%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 .modal__close-button:hover {
   color: #212121;
@@ -45,11 +47,14 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .modalisopened {
   display: flex;
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__title {
@@ -219,11 +224,14 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .modalisopened {
   display: flex;
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__title {

@@ -38,43 +38,66 @@ initialCards.forEach(card => {
 });
 
 
-
 function openProfileModal() { 
   document.querySelector('#editModal').classList.add('modalisopened');
-
 }
+
 function closeProfileModal() {
-   document.querySelector('#editModal').classList.remove('modalisopened');
-  
+  document.querySelector('#editModal').classList.remove('modalisopened');
 }
-const editProfileButton  = document.querySelector(".profile__edit-button")
 
-editProfileButton.addEventListener("click", openProfileModal)
+const editProfileButton = document.querySelector(".profile__edit-button");
+const modalCloseButton = document.querySelector("#editModal .modal__close-button");
+
+editProfileButton.addEventListener("click", openProfileModal);
+modalCloseButton.addEventListener("click", closeProfileModal);
+
+const editForm = document.querySelector('#editModal form');
+editForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const newName = editForm.querySelector('#title').value;
+  const newDesc = editForm.querySelector('#subtitle').value;
+
+  document.querySelector('.profile__title').textContent = newName;
+  document.querySelector('.profile__subtitle').textContent = newDesc;
+
+  closeProfileModal();
+});
 
 
-const modalCloseButton  = document.querySelector("#editModal .modal__close-button")
-
-modalCloseButton.addEventListener("click", closeProfileModal)
-
-
+// Post Modal
 function openPostModal() {
   document.querySelector('#postModal').classList.add('modalisopened');
-  
 }
 
 function closePostModal() {
-  console.log("Heloo there")
   document.querySelector('#postModal').classList.remove('modalisopened');
 }
 
-  const newPostButton  = document.querySelector(".profile__post-button")
-  console.log(newPostButton)
+const PostProfileButton = document.querySelector(".profile__post-button");
+const modalCloseBtn = document.querySelector("#postModal .modal__close-btn");
 
-newPostButton.addEventListener("click", openPostModal)
+PostProfileButton.addEventListener("click", openPostModal);
+modalCloseBtn.addEventListener("click", closePostModal);
+
+const postForm = document.querySelector('#postModal .form');
+postForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const newName = postForm.querySelector('#title').value;
+  const newDesc = postForm.querySelector('#subtitle').value;
+
+  document.querySelector('.post__title').textContent = newName;
+  document.querySelector('.post__subtitle').textContent = newDesc;
+
+  closePostModal();
+});
 
 
 
-const modalCloseBtn  = document.querySelector("#postModal .modal__close-btn")
 
-modalCloseBtn.addEventListener("click", closePostModal)
+
+
+
 
