@@ -81,7 +81,7 @@ const modalCloseBtn = document.querySelector("#postModal .modal__close-btn");
 PostProfileButton.addEventListener("click", openPostModal);
 modalCloseBtn.addEventListener("click", closePostModal);
 
-const postForm = document.querySelector('#postModal .form');
+const postForm = document.querySelector('#postModal form');
 postForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
