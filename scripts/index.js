@@ -1,3 +1,13 @@
+ const profileTitle = document.querySelector('.profile__title');
+
+const editModal = document.querySelector('#editModal');
+const editModalName = editModal.querySelector('#title');
+
+
+   const profileSubtitle = document.querySelector('.profile__subtitle');
+const editModalDescription = editModal.querySelector('#subtitle');
+
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -38,29 +48,35 @@ initialCards.forEach(card => {
 });
 
 
-function openProfileModal() { 
+function openProfileModal() {
+   editModalName.value = profileTitle.textContent;
+  editModalDescription.value = profileSubtitle.textContent 
   document.querySelector('#editModal').classList.add('modalisopened');
+
 }
 
-function closeProfileModal() {
+
+
+
+
+ function closeProfileModal() {
   document.querySelector('#editModal').classList.remove('modalisopened');
 }
-
-const editProfileButton = document.querySelector(".profile__edit-button");
+ const editProfileButton = document.querySelector(".profile__edit-button");
 const modalCloseButton = document.querySelector("#editModal .modal__close-button");
 
-editProfileButton.addEventListener("click", openProfileModal);
-modalCloseButton.addEventListener("click", closeProfileModal);
+ editProfileButton.addEventListener("click", openProfileModal)
+ modalCloseButton.addEventListener("click", closeProfileModal);
 
 const editForm = document.querySelector('#editModal form');
 editForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const newName = editForm.querySelector('#title').value;
-  const newDesc = editForm.querySelector('#subtitle').value;
+  // const newName = editForm.querySelector('#title').value;
+  // const newDesc = editForm.querySelector('#subtitle').value;
 
-  document.querySelector('.profile__title').textContent = newName;
-  document.querySelector('.profile__subtitle').textContent = newDesc;
+  // document.querySelector('.profile__title').textContent = newName;
+  // document.querySelector('.profile__subtitle').textContent = newDesc;
 
   closeProfileModal();
 });
@@ -75,21 +91,20 @@ function closePostModal() {
   document.querySelector('#postModal').classList.remove('modalisopened');
 }
 
-const PostProfileButton = document.querySelector(".profile__post-button");
-const modalCloseBtn = document.querySelector("#postModal .modal__close-btn");
+ const PostProfileButton = document.querySelector(".profile__post-button");
+ const modalCloseBtn = document.querySelector("#postModal .modal__close-btn");
 
-PostProfileButton.addEventListener("click", openPostModal);
+ PostProfileButton.addEventListener("click", openPostModal);
 modalCloseBtn.addEventListener("click", closePostModal);
 
 const postForm = document.querySelector('#postModal form');
-postForm.addEventListener('submit', (e) => {
+ postForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const newName = postForm.querySelector('#title').value;
-  const newDesc = postForm.querySelector('#subtitle').value;
+  const newImage = postForm.querySelector('#image').value;
+  const newCaption = postForm.querySelector('#caption').value;
 
-  document.querySelector('.post__title').textContent = newName;
-  document.querySelector('.post__subtitle').textContent = newDesc;
+console.log(newImage , newCaption);
 
   closePostModal();
 });
