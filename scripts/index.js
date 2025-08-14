@@ -72,11 +72,11 @@ const editForm = document.querySelector('#editModal form');
 editForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // const newName = editForm.querySelector('#title').value;
-  // const newDesc = editForm.querySelector('#subtitle').value;
+   const newName = editForm.querySelector('#title').value;
+  const newDesc = editForm.querySelector('#subtitle').value;
 
-  // document.querySelector('.profile__title').textContent = newName;
-  // document.querySelector('.profile__subtitle').textContent = newDesc;
+  document.querySelector('.profile__title').textContent = newName;
+  document.querySelector('.profile__subtitle').textContent = newDesc;
 
   closeProfileModal();
 });
