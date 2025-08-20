@@ -54,9 +54,9 @@ function closeModal(modalElement) {
 // image preview modal
 
 const imageModal = document.getElementById("imagePreviewModal");
-const modalImage = imageModal?.querySelector(".modal__image");
-const modalCaption = imageModal?.querySelector(".modal__caption");
-const modalCloseButton = imageModal?.querySelector(".modal__close-button");
+const modalImage = imageModal.querySelector(".modal__image");
+const modalCaption = imageModal.querySelector(".modal__caption");
+const modalCloseButton = imageModal.querySelector(".modal__close-button");
 
 modalCloseButton.addEventListener("click", () => closeModal(imageModal));
 
