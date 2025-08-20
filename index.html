@@ -45,151 +45,109 @@
               <button class="profile__post-button">New Post</button>
             </div>
           </section>
+
           <section class="cards">
             <ul class="cards__list">
-              <li class="card">
-                <img
-                  class="card__image"
-                  src="./images/val-thorens.jpg"
-                  alt="picture of a hut"
-                />
-                <div class="card__description">
-                  <h2 class="card__title">Val Thorens</h2>
-                  <button class="card__like-button" type="button"></button>
-                </div>
-              </li>
-
-              <li class="card">
-                <img
-                  class="card__image"
-                  src="./images/restaurant.jpg"
-                  alt="picture of a restaurant"
-                />
-                <div class="card__description">
-                  <h2 class="card__title">Restaurant Terrace</h2>
-                  <button class="card__like-button" type="button"></button>
-                </div>
-              </li>
-
-              <li class="card">
-                <img
-                  class="card__image"
-                  src="./images/an-outdoor-cafe.jpg"
-                  alt="picture of outdoor cafe"
-                />
-                <div class="card__description">
-                  <h2 class="card__title">An outdoor cafe</h2>
-                  <button class="card__like-button" type="button"></button>
-                </div>
-              </li>
-
-              <li class="card">
-                <img
-                  class="card__image"
-                  src="./images/a-very-long-bridge.jpg"
-                  alt="picture of  long bridge"
-                />
-                <div class="card__description">
-                  <h2 class="card__title">
-                    A very long bridge over the forest
-                  </h2>
-                  <button class="card__like-button" type="button"></button>
-                </div>
-              </li>
-
-              <li class="card">
-                <img
-                  class="card__image"
-                  src="./images/tunnel.jpg"
-                  alt="picture of a tunnel"
-                />
-                <div class="card__description">
-                  <h2 class="card__title">Tunnel with morning light</h2>
-                  <button class="card__like-button" type="button"></button>
-                </div>
-              </li>
-
-              <li class="card">
-                <img
-                  class="card__image"
-                  src="./images/mountain.jpg"
-                  alt="picture of a mountain"
-                />
-                <div class="card__description">
-                  <h2 class="card__title">Mountain house</h2>
-                  <button class="card__like-button" type="button"></button>
-                </div>
-              </li>
-            </ul>
+              </ul>
+              <template id="card-template">
+                <li class="card">
+                  <button
+                    aria-label="Delete-card"
+                    class="card__delete-button"
+                    type="button"
+                  >
+                    <!-- <img src="" alt="" />  -->
+                  </button>
+                  <img class="card__image" src="#" alt="" />
+                  <div class="card__description">
+                    <h2 class="card__title"></h2>
+                    <button
+                      aria-label="Like-card"
+                      class="card__like-button"
+                      type="button"
+                    ></button>
+                  </div>
+                </li>
+              </template>
+            <!-- </ul> -->
           </section>
-        </section>
-        <div class="modalisopened">
-          <div class="modal" id="editModal">
-            <div class="modal__container">
-              <form action="#" method="get" class="formlogin">
-                <button class="modal__close-button" type="button">
-                  &times;
-                </button>
-                <h2 class="modal__title">Edit Profile</h2>
+          <!-- preview image modal -->
+          <div class="modal" id="imagePreviewModal">
+            <div class="modal__content">
+              <button class="modal__close-button">&times;</button>
+              <img class="modal__image" src="" alt="" />
+              <p class="modal__caption"></p>
+            </div>
+          </div>
+          <!-- till here -->
+          <div class="modalisopened">
+            <div class="modal" id="editModal">
+              <div class="modal__container">
+                <form action="#" method="get" class="formlogin">
+                  <button class="modal__close-button" type="button">
+                    &times;
+                  </button>
+                  <h2 class="modal__title">Edit Profile</h2>
 
-                <label class="modal__name" for="title">Name</label>
+                  <label class="modal__name" for="title">Name</label>
+                  <input
+                    class="modal__label"
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Type your name"
+                    required
+                  />
+
+                  <label class="modal__description" for="subtitle"
+                    >Description</label
+                  >
+                  <input
+                    class="modal__label"
+                    type="text"
+                    id="subtitle"
+                    name="subtitle"
+                    placeholder="Civil aviator"
+                    required
+                  />
+                  <button class="modal__save-button" type="submit">Save</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" id="postModal">
+            <div class="modal__container">
+              <form action="#" method="get" class="formLogin">
+                <button class="modal__close-btn" type="button">&times;</button>
+                <h2 class="modal__title">New Post</h2>
+
+                <label class="modal__image" for="image">Image link</label>
                 <input
                   class="modal__label"
                   type="text"
-                  id="title"
-                  name="title"
-                  placeholder="Type your name"
+                  id="image"
+                  name="image"
+                  placeholder="Paste a link to the picture"
                   required
                 />
-
-                <label class="modal__description" for="subtitle"
-                  >Description</label
-                >
+                <label class="modal__caption" for="caption">Caption</label>
                 <input
                   class="modal__label"
                   type="text"
-                  id="subtitle"
-                  name="subtitle"
-                  placeholder="Civil aviator"
+                  id="caption"
+                  name="caption"
+                  placeholder="Type your caption"
                   required
                 />
                 <button class="modal__save-button" type="submit">Save</button>
               </form>
             </div>
           </div>
-        </div>
-
-        <div class="modal" id="postModal">
-          <div class="modal__container">
-            <form action="#" method="get" class="formLogin">
-              <button class="modal__close-btn" type="button">&times;</button>
-              <h2 class="modal__title">New Post</h2>
-
-              <label class="modal__image" for="image">Image link</label>
-              <input
-                class="modal__label"
-                type="text"
-                id="image"
-                name="image"
-                placeholder="Paste a link to the picture"
-                required
-              />
-              <label class="modal__caption" for="caption">Caption</label>
-              <input
-                class="modal__label"
-                type="text"
-                id="caption"
-                name="caption"
-                placeholder="Type your caption"
-                required
-              />
-              <button class="modal__save-button" type="submit">Save</button>
-            </form>
-          </div>
-        </div>
-        <footer class="footer">
-          <p class="footer__copyright">2023 © Spots</p>
-        </footer>
+          <footer class="footer">
+            <p class="footer__copyright">2023 © Spots</p>
+          </footer>
+        </section>
       </main>
     </div>
     <script src="./scripts/index.js"></script>

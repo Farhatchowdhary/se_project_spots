@@ -21,16 +21,18 @@
   border: none;
   font-size: 40px;
   cursor: pointer;
-  color: #212121;
+  color: black;
   transition: color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-right: 20px;
   opacity: 40%;
-  transition: opacity 0.5s ease-in-out;
 }
+
+
+
 .modal__close-button:hover {
   color: #212121;
 }
@@ -48,6 +50,12 @@
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  display: none;
+}
+
+.modal__image {
+  max-width: 85px;
+  max-height: 18px;
 }
 
 .modalisopened {
@@ -145,37 +153,15 @@
   margin-top: 20px;
 }
 
-@media screen and (max-width: 620px) {
-  .modal__container {
-    width: 300px;
-    border-radius: 8px;
-    padding: 12px;
-    gap: 24px;
-    background-color: #ffffff;
-  }
-
-  .modal__label {
-    width: 276px;
-    height: 48px;
-    border-radius: 8px;
-    bottom: 1px;
-    padding: 16px 12px;
-  }
-
-  .modal__title {
-    width: 106px;
-    height: 20px;
-    font-size: 20px;
-  }
-
-  .modal__save-button {
-    width: 276px;
-    height: 52px;
-    margin: 0 auto;
-  }
+#imagePreviewModal .modal__image {
+  width: 991.5px;
+  height: 661px;
+  max-width: 80vw;
+  max-height: 80vh;
+  top: 81px;
+  left: 224px;
+  border-radius:8px;
 }
-
-/* This is for the New Post pop up form */
 
 .modal__container {
   position: fixed;
@@ -199,7 +185,7 @@
   border: none;
   font-size: 40px;
   cursor: pointer;
-  color: #212121;
+  color: black;
   transition: color 0.3s;
   display: flex;
   align-items: center;
@@ -274,6 +260,7 @@
   color: #212121;
   margin: 0 0 8px 0;
   margin-bottom: 8px;
+  object-fit: cover;
 }
 
 .modal__caption {
@@ -322,6 +309,7 @@
   margin: auto 0;
 }
 
+
 @media screen and (max-width: 620px) {
   .modal__container {
     width: 300px;
@@ -350,4 +338,9 @@
     height: 52px;
     margin: 0 auto;
   }
+
+
+  #imagePreviewModal .modal__image {
+   width: 446.43px;
+   height: 661px; 
 }

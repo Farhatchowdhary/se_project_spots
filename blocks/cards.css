@@ -4,13 +4,16 @@
 
 .cards__list {
   display: grid;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 413px);
+  /* grid-auto-rows: 413px;  */
   grid-gap: 20px 40px;
+  max-width: 100%;
   max-height: fit-content;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   padding: 0;
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 620px) {
