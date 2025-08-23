@@ -14,9 +14,8 @@
 }
 
 .modal__close-button {
-  position: absolute;
-  top: 81px;
-  left: 1228px;
+ position: absolute;
+  top: 10px;
   right: 10px;
   background: none;
   border: none;
@@ -54,9 +53,11 @@
   display: none;
 }
 
+
 .modal__image {
   max-width: 85px;
   max-height: 18px;
+ 
 }
 
 .modalisopened {
@@ -89,7 +90,7 @@
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .modal__name {
@@ -130,6 +131,7 @@
   border-radius: 0px;
   padding: 16px 12px;
   border: 1px solid #212121;
+
 }
 
 .modal__input:focus {
@@ -162,6 +164,7 @@
   top: 81px;
   left: 224px;
   border-radius:8px;
+  
 }
 
 .modal__container {
@@ -245,7 +248,7 @@
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .modal__image {
@@ -293,6 +296,8 @@
   outline: none;
   border-color: #212121;
 }
+
+
 
 .modal__save-button {
   display: flex;
