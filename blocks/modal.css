@@ -316,14 +316,15 @@
 }
 
 
-@media screen and (max-width: 620px) 
+@media screen and (max-width: 620px) {
   .modal__container {
     width: 300px;
     border-radius: 8px;
     padding: 12px;
     gap: 24px;
-    background-color: #ffffff;
+    background-color:#ffffff;
   }
+}
 
   .modal__label {
     width: 276px;
