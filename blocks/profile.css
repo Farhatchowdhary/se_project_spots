@@ -45,10 +45,6 @@
   flex-direction: column;
 }
 
-img  {
-  w
-}
-
 .profile__container {
   display: flex;
   gap: 20px;
