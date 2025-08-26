@@ -316,7 +316,7 @@
 }
 
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 620px) 
   .modal__container {
     width: 300px;
     border-radius: 8px;
