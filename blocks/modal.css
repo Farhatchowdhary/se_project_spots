@@ -11,6 +11,8 @@
   z-index: -1;
   transform: translate(-50%, -50%);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  width: 700px;
+  height: 500px;
 }
 
 .modal__close-button {
@@ -81,8 +83,14 @@
   margin-top: 0;
 }
 
+.modal__label  {
+  /* width: 630px; */
+  height: 52px;
+}
+
 .modal__label {
-  width: 690px;
+  width: 630px;
+  height: 52px;
   border-radius: 8px;
   padding: 16px 12px;
   gap: 10px;
@@ -90,8 +98,21 @@
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
-  /* margin-bottom: 30px; */
+
 }
+
+/* 
+/* .modal__label {
+  width: 260px;
+  border-radius: 8px; */
+  /* padding: 16px 12px;
+  gap: 10px;
+  border: 1px solid #212121;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+ }  */ 
+
 
 .modal__name {
   display: flex;
@@ -179,6 +200,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+   width: 700px;
+  height: 500px;
 }
 
 .modal__close-btn {
@@ -239,8 +262,10 @@
   margin-top: 0;
 }
 
-.modal__label {
-  width: 690px;
+
+
+/* .modal__label {
+  width: 260px;
   border-radius: 8px;
   padding: 16px 12px;
   gap: 10px;
@@ -249,13 +274,13 @@
   font-weight: 500;
   font-style: normal;
   /* margin-bottom: 30px; */
-}
+ 
 
 .modal__image {
-  display: flex;
+   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 85px;
+  /* width: 49px; */
   height: 18px;
   font-weight: 500;
   font-style: normal;
@@ -263,9 +288,8 @@
   line-height: 100%;
   color: #212121;
   margin: 0 0 8px 0;
-  margin-bottom: 8px;
-  object-fit: cover;
-}
+  margin-bottom: 10px;
+} 
 
 .modal__caption {
   display: flex;
@@ -299,7 +323,7 @@
 
 
 
-.modal__save-button {
+.modal__save-button    {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -316,6 +340,7 @@
 }
 
 
+
 @media screen and (max-width: 620px) {
   .modal__container {
     width: 300px;
@@ -324,11 +349,11 @@
     gap: 24px;
     background-color:#ffffff;
   }
-}
+
 
   .modal__label {
-    width: 276px;
-    height: 48px;
+    width: 260px;
+    height: 28px;
     border-radius: 8px;
     bottom: 1px;
     padding: 16px 12px;
@@ -350,4 +375,6 @@
   #imagePreviewModal .modal__image {
    width: 446.43px;
    height: 661px; 
+}
+
 }
