@@ -326,6 +326,32 @@
 }
 
 
+.modal__label_type_error {
+  border: 1px solid red;
+  outline: none;
+}
+
+
+.form__error_visible {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.form__error  {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top:4px ;
+
+}
+
+.modal__save-button_disabled  {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
 
 @media screen and (max-width: 620px) {
   .modal__container {

@@ -1,4 +1,22 @@
- const initialCards = [
+  import { enableValidation } from '../script/validation.js'; 
+  
+const svalidationConfig = {
+  formSelector: ".formlogin, .formLogin",
+  inputSelector: ".modal__label",
+  submitButtonSelector: ".modal__save-button",
+  inactiveButtonClass: "modal__save-button_disabled",
+  inputErrorClass: "modal__label_type_error",
+  errorClass: "form__error_visible"
+};
+
+
+enableValidation(svalidationConfig);
+
+
+
+
+
+const initialCards = [
 
   {
     name: "Val Thorens",
@@ -113,21 +131,25 @@ const editForm = editModal.querySelector('form');
 
 
 
-const resetForm = (form) =>  {
+function toggleButton(inputs, button) {
+  const hasInvalid = inputs.some(input => !input.validity.valid);
+  button.disabled = hasInvalid;
+  button.classList.toggle('modal__save-button_disabled', hasInvalid);
+}
+
+const resetForm = (form, settings) => {
   const inputs = Array.from(form.querySelectorAll(settings.inputSelector));
   const button = form.querySelector(settings.submitButtonSelector);
 
-  inputs.forEach(input =>  {
+  inputs.forEach(input => {
     const error = form.querySelector(`#${input.id}-error`);
     input.classList.remove(settings.inputErrorClass);
     error.textContent = '';
-error.classList.remove(settings.errorClass);
+    error.classList.remove(settings.errorClass);
   });
 
-    // ✅ Disable the submit button after reset
-    toggleButton(inputs, button);
-  };
-
+  toggleButton(inputs, button); // ✅ call the function here
+};
 
 
 //   Edit Profile Modal
@@ -135,7 +157,7 @@ editProfileButton.addEventListener("click", () => {
   editModalName.value = profileTitle.textContent;
    editModalDescription.value = profileSubtitle.textContent;
 
-  resetForm(editForm);
+  resetForm(editForm, svalidationConfig );
   openModal(editModal);
 });
 
@@ -145,7 +167,7 @@ editModal.addEventListener("submit", (e) =>  {
   profileSubtitle.textContent = editForm.subtitle.value;
 
   closeModal(editModal);
-  resetForm(editForm);
+  resetForm(editForm, svalidationConfig);
 });
 
 //  New post Modal
@@ -154,7 +176,7 @@ editModal.addEventListener("submit", (e) =>  {
   const postModal = document.querySelector("#postModal");
   const postForm = postModal.querySelector("form");
   postProfileButton.addEventListener("click", () =>  {
-  resetForm(postForm);
+  resetForm(postForm, svalidationConfig);
  openModal(postModal);
 });
 
@@ -174,7 +196,7 @@ cardsList.prepend(newCard);
 closeModal(postModal);
 
 postForm.reset();
-  resetForm(postForm);
+  resetForm(postForm, svalidationConfig);
 });
 
 
