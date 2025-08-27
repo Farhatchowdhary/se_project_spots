@@ -17,14 +17,14 @@
 }
 
 .card__title {
-  width: 353px;
+  /* width: 353px; */
   height: 24px;
   width: 413px;
   /* height: 413px; */
   font: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 10px;
-  font-style: medium;
+  font-style:normal;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;

@@ -8,7 +8,7 @@
    line-height: 110px;
    letter-spacing: 0%;
    color:#FF0000;
-   display: flex;
+   display: none;
    flex-direction: column-reverse;
    /* align-content: stretch; */
    justify-content: center;

@@ -41,15 +41,6 @@ const cardTemplate = document
 .querySelector("#card-template").content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
 
-function openModal(modalElement) {
- modalElement.classList.add('modalisopened'); 
-  
-}
-
-function closeModal(modalElement) {
-  modalElement.classList.remove('modalisopened');
-}
-
 
 // image preview modal
 
@@ -87,6 +78,13 @@ cardLikeButton.addEventListener("click", () => {
   cardLikeButton.classList.toggle("card__like-button_active");
 });
 
+// ✅ Delete button 
+  const deleteButton = cardElement.querySelector(".card__delete-button"); 
+  if (deleteButton) {
+    deleteButton.addEventListener("click", () => {
+      cardElement.remove();
+    });
+  }
 
 return cardElement;
 }
@@ -114,56 +112,6 @@ const editmodalCloseButton = editModal.querySelector(".modal__close-button");
 const editForm = editModal.querySelector('form');
 
 
-// // Open profile modal
-// editProfileButton.addEventListener("click", () => {
-//   editModalName.value = profileTitle.textContent;
-//   editModalDescription.value = profileSubtitle.textContent;
-//   openModal(editModal);
-// });
-
-// // Close profile modal
-// editmodalCloseButton.addEventListener("click", () => closeModal(editModal));
-
-// // Profile form submit
-// // const editForm = editModal.querySelector('form');
-// editForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   profileTitle.textContent = editModalName.value;
-//   profileSubtitle.textContent = editModalDescription.value;
-//   closeModal(editModal);
-// });
-
-// ===== Post Modal =====
-// const postModal = document.querySelector('#postModal');
-// const PostProfileButton = document.querySelector(".profile__post-button");
-// const postmodalCloseBtn = postModal.querySelector(".modal__close-btn");
-// const postForm = postModal.querySelector('form');
-
-// Open post modal
-// PostProfileButton.addEventListener("click", () => openModal(postModal));
-
-// // Close post modal
-// postmodalCloseBtn.addEventListener("click", () => closeModal(postModal));
-
-// // Post form submit
-
-// postForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-
-  
-//   const newImage = postForm.querySelector('#image').value;
-//   const newCaption = postForm.querySelector('#caption').value;
-
-//   const newCard = getCardElement({
-//     name: newCaption,
-//     link: newImage });
-//      cardsList.prepend(newCard);
-
-//   closeModal(postModal);
-
-// postForm.reset();
-// });
- 
 
 const resetForm = (form) =>  {
   const inputs = Array.from(form.querySelectorAll(settings.inputSelector));
@@ -175,12 +123,17 @@ const resetForm = (form) =>  {
     error.textContent = '';
 error.classList.remove(settings.errorClass);
   });
-};
+
+    // ✅ Disable the submit button after reset
+    toggleButton(inputs, button);
+  };
+
 
 
 //   Edit Profile Modal
 editProfileButton.addEventListener("click", () => {
   editModalName.value = profileTitle.textContent;
+   editModalDescription.value = profileSubtitle.textContent;
 
   resetForm(editForm);
   openModal(editModal);
@@ -197,13 +150,17 @@ editModal.addEventListener("submit", (e) =>  {
 
 //  New post Modal
 
-  const PostProfileButton = document.querySelector(".profile__post-button");
+  const postProfileButton = document.querySelector(".profile__post-button");
   const postModal = document.querySelector("#postModal");
   const postForm = postModal.querySelector("form");
-  PostProfileButton.addEventListener("click", () =>  {
+  postProfileButton.addEventListener("click", () =>  {
   resetForm(postForm);
  openModal(postModal);
 });
+
+
+
+
 
 postForm.addEventListener("submit", (e) => {
 e.preventDefault();
@@ -220,17 +177,7 @@ postForm.reset();
   resetForm(postForm);
 });
 
-// Select all Modals
-const modals = document.querySelectorAll(".modal, .modalisopened");
 
-// Add click listener to each modal
-modals.forEach(modal => {
-  modal.addEventListener("click", (e) =>  {
-    if(e.target === modal)  {
-      closeModal(modal);
-    }
-  });
-});
 
 // Handler function for Escape key
 const handleEscClose = (e) => {
@@ -251,17 +198,7 @@ function closeModal(modalElement) {
   document.removeEventListener("keydown", handleEscClose); // remove listener when modal closes
 }
 
-// Close modal when clicking on overlay
-document.querySelectorAll(".modal").forEach(modal => {
-  modal.addEventListener("mousedown", (event) => {
 
-
-    // Check if the click is exactly on the overlay, not inside modal content
-    if (event.target === modal) {
-      closeModal(modal);
-    }
-  });
-});
 
 
 // Attach close button functionality for all modals
