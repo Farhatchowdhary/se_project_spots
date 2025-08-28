@@ -161,6 +161,7 @@
   cursor: pointer;
   margin: auto 0;
   margin-top: 50px;
+ 
 }
 
 #imagePreviewModal .modal__image {
@@ -174,7 +175,7 @@
   
 }
 
-.modal__container {
+/* .modal__container {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -188,7 +189,9 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
    width: 700px;
   height: 500px;
-}
+
+ 
+} */
 
 .modal__close-btn {
   position: absolute;
@@ -224,6 +227,8 @@
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
 }
 
 .modalisopened {
