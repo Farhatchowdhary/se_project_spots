@@ -24,26 +24,35 @@ const initialCards = [
     alt: "picture of a hut"
    },
 
+
    {
      name: "Restaurant Terrace",
     link: "./images/restaurant.jpg",
      alt: "picture of a restaurant"
    },
+
+
    {
      name: "An outdoor cafe",
      link: "./images/an-outdoor-cafe.jpg",
      alt: "picture of outdoor cafe"
    },
+
+
    {
      name: "A very long bridge over the forest",
      link: "./images/a-very-long-bridge.jpg",
      alt: "picture of long bridge"
    },
+
+
   {
      name: "Tunnel with morning light",
      link: "./images/tunnel.jpg",
      alt: "picture of a tunnel"
    },
+
+
   {
      name: "Mountain house",
      link: "./images/mountain.jpg",
@@ -91,10 +100,14 @@ cardImage.addEventListener("click", () => {
   openModal(imageModal);
 });
 
+
+
 const cardLikeButton = cardElement.querySelector(".card__like-button");
 cardLikeButton.addEventListener("click", () => {
   cardLikeButton.classList.toggle("card__like-button_active");
 });
+
+
 
 // ✅ Delete button 
   const deleteButton = cardElement.querySelector(".card__delete-button"); 

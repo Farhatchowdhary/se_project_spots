@@ -1,9 +1,23 @@
 .form__error {
-   width: 730px; 
-   height: 408px;
-    font-style: medium;
-    letter-spacing: 0%;
-    color: #FF0000;
-    flex-direction: column-reverse;
-    justify-content: center;
+  width: 730px;
+  font-style: medium;
+  letter-spacing: 0%;
+  color: #ff0000;
+  flex-direction: column-reverse;
+  justify-content: center;
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+
+
+
+.form__error_visible {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  margin-bottom: 30px;
 }

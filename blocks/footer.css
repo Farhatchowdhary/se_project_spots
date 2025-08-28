@@ -3,6 +3,8 @@
   background-color: #fcf5e5;
 }
 
+
+
 .footer__copyright {
   font-size: 18px;
   line-height: 22px;
@@ -13,6 +15,8 @@
   height: auto;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+
+
 
 @media screen and (max-width: 630px) {
   .footer__copyright {

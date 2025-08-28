@@ -2,12 +2,12 @@
   border-bottom: 1px solid #21212166;
 }
 
+
+
 .cards__list {
-  display: grid;
-  /* flex-direction: column; */
+  display: grid; 
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 413px);
-  /* grid-auto-rows: 413px;  */
   grid-gap: 20px 40px;
   max-width: 100%;
   max-height: fit-content;
@@ -15,6 +15,8 @@
   padding: 0;
   overflow-y: auto;
 }
+
+
 
 @media screen and (max-width: 620px) {
   .cards__list {

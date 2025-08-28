@@ -3,11 +3,15 @@
   height: auto;
   background-color: #fcf5e5;
 }
+
+
 .main__content {
   bottom: 20px;
   padding: 0 8px;
   position: relative;
 }
+
+
 
 @media screen and (max-width: 620px) {
   .main__content {
