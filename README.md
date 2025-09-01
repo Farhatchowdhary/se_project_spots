@@ -30,7 +30,9 @@ This is a responsive personal profile web page built with HTML and CSS. It showc
 
 ## Live Demo
 
-[View the deployed site on GitHub Pages](https://your-username.github.io/your-repo-name)
+## Live Demo
+
+[View the deployed site on GitHub Pages](https://Farhatchowdhary.github.io/se_project_spots)
 
 ## Technologies Used
 
