@@ -22,9 +22,9 @@
 .card__title {
   height: 24px;
   width: 413px;
-  font: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 20px;
   font-style:normal;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -52,7 +52,7 @@
 
 .card__like-button:hover {
   opacity: 1;
-  background-image: url("../images/State=Hover (2).png");
+  background-image: url("../images/hovercolor.svg");
 }
 
 
@@ -61,6 +61,7 @@
 .card__like-button_active {
   opacity: 1;
   background-image: url("../images/likedbtn.png");
+
 }
 
 
@@ -100,12 +101,12 @@
 
 
 .card__image {
-  max-height: 413px;
-  max-width: 413px;
+  height: 413px;
+  width: 413px;
   border-radius: 16px;
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 
