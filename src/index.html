@@ -12,14 +12,15 @@
       name="keywords"
       content="travel, best travel spots, hidden gems, top destinations, landmarks, travel guide, vacation ideas, world travel"
     />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<!-- <link rel="stylesheet" href="./pages/index.css"> -->
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img class="header__logo" src="./images/Logo.svg" alt="spots logo" />
+        <img class="header__logo" src="<%=require('./images/Logo.svg')%>"  alt="spots logo" />
       </header>
 
       <main class="main">
@@ -28,7 +29,7 @@
             <div class="profile__container">
               <img
                 class="profile__picture"
-                src="./images/avatar.jpg"
+                src="<%=require('./images/avatar.jpg')%>"
                 alt="image of a bessie coleman"
               
               />
@@ -64,6 +65,7 @@
                     class="card__like-button"
                     type="button"
                   ></button>
+                  <span class="card__like-count"></span>
                 </div>
               </li>
             </template>
@@ -131,6 +133,7 @@
 
           <div class="modal" id="postModal">
             <div class="modal__container">
+              
               <form action="#" method="get" class="formLogin">
                 <button class="modal__close-btn" type="button">&times;</button>
                 <h2 class="modal__title">New Post</h2>
@@ -175,7 +178,17 @@
       
       </main>
     </div>
-   <script type="module" src="./pages/index.js"></script>
-    
-  </body>
+
+    <div class="modal" id="deleteConfirmModal">
+  <div class="modal__content">
+    <button class="modal__close-btn" type="button">&times;</button>
+    <h2 class="modal__title">Are you sure you want to delete this image?</h2>
+    <div class="modal__buttons">
+      <button class="modal__delete-confirm">Delete</button>
+      <button class="modal__cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+<script src="./script/index.js" type="module"></script>
+</body>
 </html>
