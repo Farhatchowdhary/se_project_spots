@@ -29,10 +29,10 @@
             <div class="profile__container">
               <img
                 class="profile__picture"
-                src="<%=require('./images/avatar.jpg')%>"
-                alt="image of a bessie coleman"
-              
-              />
+                id="profileAvatar"
+                src="<%=require('/images/avatar.jpg')%>"
+                alt="Profile picture of  bessie coleman"
+            />
 
               <div class="profile__information">
                 <div class="profile__description">
@@ -178,6 +178,39 @@
       
       </main>
     </div>
+
+<div class="modal" id="avatarModal">
+  <div class="modal__container">
+
+    <form action="#" method="get" id="avatarForm" action="#" method="get" class="formLogin">
+      <button class="modal__close-btn" type="button">&times;</button>
+      <h2 class="modal__title">Update Avatar</h2>
+
+      <!-- Current avatar preview -->
+      <img class="modal__current-avatar" src="/images/avatar.jpg" alt="Current avatar" />
+
+      <label class="modal__image" for="avatar">Avatar link</label>
+      <input
+        class="modal__label"
+        type="url"
+        id="avatar"
+        name="avatar"
+        placeholder="Paste a link to your new avatar"
+        required
+      />
+      <span class="form__error" id="avatar-error">Please enter a valid URL</span>
+
+      <button class="modal__save-button" type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
 
     <div class="modal" id="deleteConfirmModal">
   <div class="modal__content">
