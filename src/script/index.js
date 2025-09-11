@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const profileSubtitle = document.querySelector('.profile__subtitle');
   const profileAvatar = document.querySelector('.profile__picture');
   const cardsList = document.querySelector(".cards__list");
+  
 
 
   
@@ -39,20 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentUserId = null;
 
-  // --- Load User Info ---
-  api.getUserInfo()
-    .then(user => {
-      currentUserId = user._id;
-      profileTitle.textContent = user.name;
-      profileSubtitle.textContent = user.about;
-      profileAvatar.src = user.avatar;
-    })
-    .catch(err => console.log(err));
+// --- Load User Info & Cards ---
+Promise.all([api.getUserInfo(), api.getInitialCards()])
+  .then(([user, cards]) => {
+    currentUserId = user._id;
 
-api.getInitialCards()
-  .then(cards => {
+    // set profile info
+    profileTitle.textContent = user.name;
+    profileSubtitle.textContent = user.about;
+    profileAvatar.src = user.avatar;
+
+    // render cards
     cards.forEach(cardData => {
-      const cardElement = createCard({ ...cardData, owner: { _id: cardData.owner._id }, likes: cardData.likes });
+      const cardElement = createCard({
+        ...cardData,
+        owner: { _id: cardData.owner._id },
+        likes: cardData.likes
+      });
       cardsList.append(cardElement);
     });
   })
@@ -258,20 +262,53 @@ api.getInitialCards()
   });
 
 
-  avatarForm.addEventListener("submit", e => {
-    e.preventDefault();
-    const avatarUrl = avatarForm.querySelector("#avatar").value;
+//   avatarForm.addEventListener("submit", e => {
+//     e.preventDefault();
+//     const avatarUrl = avatarForm.querySelector("#avatar").value;
 
-    handleFormSubmit(avatarForm, () =>
+//     handleFormSubmit(avatarForm, () =>
 
-      api.updateAvatar({ avatar: avatarUrl })
-        .then(updated => {
-          profileAvatar.src = updated.avatar;
-          currentAvatarImg.src = updated.avatar;
-          closeModal(avatarModal);
-          avatarForm.reset();
-        })
-        .catch(err => console.log(err))
-    );
-  });
+//       api.updateAvatar({ avatar: avatarUrl })
+//         .then(updated => {
+//           profileAvatar.src = updated.avatar;
+//           currentAvatarImg.src = updated.avatar;
+//           closeModal(avatarModal);
+//           avatarForm.reset();
+//         })
+//         .catch(err => console.log(err))
+//     );
+//   });
+// });
+
+
+
+
+// Remove: const avatarForm = document.getElementById("avatarForm");
+
+
+avatarForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const avatarInput = avatarForm.querySelector("#avatar");
+  const saveBtn = avatarForm.querySelector(".modal__save-button");
+
+  if (!avatarInput.value.trim()) return;
+
+  const originalText = saveBtn.textContent;
+  saveBtn.textContent = "Saving...";
+  saveBtn.disabled = true;
+
+  try {
+    const updated = await api.updateAvatar({ avatar: avatarInput.value.trim() });
+    profileAvatar.src = updated.avatar;
+    currentAvatarImg.src = updated.avatar;
+    avatarForm.reset();
+    closeModal(avatarModal);
+  } catch (err) {
+    console.log(err);
+  } finally {
+    saveBtn.textContent = originalText;
+    saveBtn.disabled = false;
+  }
+})
 });

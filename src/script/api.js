@@ -51,6 +51,7 @@ unlikeCard(cardId) {
   }).then(this._checkResponse);
 }
 
+// Update profile avatar
 
 
 

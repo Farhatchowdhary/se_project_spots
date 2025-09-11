@@ -30,7 +30,7 @@
               <img
                 class="profile__picture"
                 id="profileAvatar"
-                src="<%=require('/images/avatar.jpg')%>"
+                src="<%=require('./images/avatar.jpg')%>"
                 alt="Profile picture of  bessie coleman"
             />
 
@@ -184,25 +184,27 @@
 
     <form id="avatarForm" class="formLogin"  action="#" method="get">
       <button class="modal__close-btn" type="button">&times;</button>
-      <h2 class="modal__title">Update Avatar</h2>
+      <h2 class="modal__title">Edit profile avatar</h2>
 
       <!-- Current avatar preview -->
       <img class="modal__current-avatar" src="/images/avatar.jpg" alt="Profile avatar" />
 
-      <label class="modal__image" for="avatar">Avatar link</label>
+      <label class="modal__image" for="avatar">Profile Picture</label>
       <input
         class="modal__label"
         type="url"
         id="avatar"
         name="avatar"
-        placeholder="Paste a link to your new avatar"
+        placeholder="https://somewebsite.com/someimage.png"
         required
       />
       <span class="form__error" id="avatar-error">Please enter a valid URL</span>
 
       <button class="modal__save-button" type="submit">Save</button>
     </form>
+    </div>
   </div>
+
 </div>
 
 
