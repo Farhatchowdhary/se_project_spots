@@ -262,29 +262,6 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
   });
 
 
-//   avatarForm.addEventListener("submit", e => {
-//     e.preventDefault();
-//     const avatarUrl = avatarForm.querySelector("#avatar").value;
-
-//     handleFormSubmit(avatarForm, () =>
-
-//       api.updateAvatar({ avatar: avatarUrl })
-//         .then(updated => {
-//           profileAvatar.src = updated.avatar;
-//           currentAvatarImg.src = updated.avatar;
-//           closeModal(avatarModal);
-//           avatarForm.reset();
-//         })
-//         .catch(err => console.log(err))
-//     );
-//   });
-// });
-
-
-
-
-// Remove: const avatarForm = document.getElementById("avatarForm");
-
 
 avatarForm.addEventListener("submit", async (e) => {
   e.preventDefault();

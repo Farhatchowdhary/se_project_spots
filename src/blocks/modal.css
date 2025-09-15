@@ -52,10 +52,7 @@
   transition: opacity 0.5s ease-in-out;
   display: none;
 }
-/* .modal__image {
-  max-width: 85px;
-  max-height: 18px;
-}  */
+
 
 .modalisopened {
   display: flex;

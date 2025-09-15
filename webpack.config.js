@@ -18,7 +18,7 @@ module.exports = {
   stats: "errors-only",
   
   devServer: {
-    static: path.resolve(__dirname, "./dist"),
+    static: path.resolve(__dirname, "./src"),
     compress: true,
     port: 8080,
     open: true,
@@ -27,6 +27,7 @@ module.exports = {
   },
 
   target: ["web", "es5"],
+
   module: {
     rules: [
       {
@@ -40,9 +41,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: {
-              importLoaders: 1,
-            },
+            options: { importLoaders: 1 },
           },
           "postcss-loader",
         ],
@@ -52,14 +51,12 @@ module.exports = {
         type: "asset/resource",
       },
     ],
-  },
+  },  // ← MAKE SURE COMMA IS HERE
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 plugins: [
   new HtmlWebpackPlugin({
-    template: "./src/index.html",
+    template: './src/index.html', // your HTML template
+    filename: 'index.html'
   }),
-  new CleanWebpackPlugin(),
-  new MiniCssExtractPlugin({
-    filename: "[name].css", // ensures your CSS file is correctly generated
-  })
 ]
-};
