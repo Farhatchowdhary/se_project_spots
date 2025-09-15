@@ -142,7 +142,7 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
     title.textContent = data.name;
     img.src = data.link;
     img.alt = data.name;
-    likeCount.textContent = data.likes.length;
+    // likeCount.textContent = data.likes.length;
 
     if (data.likes.some(like => like._id === currentUserId)) {
       likeBtn.classList.add("card__like-button_active");
@@ -154,7 +154,7 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
       request
         .then(updated => {
           likeBtn.classList.toggle("card__like-button_active");
-          likeCount.textContent = updated.likes.length;
+          // likeCount.textContent = updated.likes.length;
         })
         .catch(err => console.log(err));
     });
@@ -260,6 +260,7 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
         })
     );
   });
+
 
 
 

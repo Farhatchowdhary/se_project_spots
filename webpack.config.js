@@ -16,7 +16,7 @@ module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   stats: "errors-only",
-  
+
   devServer: {
     static: path.resolve(__dirname, "./src"),
     compress: true,
@@ -51,12 +51,14 @@ module.exports = {
         type: "asset/resource",
       },
     ],
-  },  // ← MAKE SURE COMMA IS HERE
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+  },
 
-plugins: [
-  new HtmlWebpackPlugin({
-    template: './src/index.html', // your HTML template
-    filename: 'index.html'
-  }),
-]
+  plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html",
+    }),
+  ],
+};
