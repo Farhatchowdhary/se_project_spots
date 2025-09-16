@@ -1,0 +1,25 @@
+{
+  "name": "se_project_spots",
+  "version": "1.0.0",
+  "description": "- Intro\r - Figma\r - Images",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Farhatchowdhary/se_project_spots.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Farhatchowdhary/se_project_spots/issues"
+  },
+  "homepage": "https://github.com/Farhatchowdhary/se_project_spots#readme",
+  "devDependencies": {
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
