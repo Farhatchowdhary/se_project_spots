@@ -1,0 +1,251 @@
+[33mcommit b5892a6cee5a6550f46cf330a4aa27553f851daf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mlatest-pr[m[33m)[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Mon Sep 15 23:21:30 2025 -0400
+
+    Final submission with all reviewer fixes
+
+[33mcommit d9280809030c0a65a6f4391e69ae954dce00baf5[m[33m ([m[1;31morigin/spots-api[m[33m)[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Mon Sep 15 13:44:03 2025 -0400
+
+    Update card template: keep heart like, remove like count
+
+[33mcommit e8320b96fbe28bfe184dcb25f46dfc8fe9c7b697[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Mon Sep 15 13:19:12 2025 -0400
+
+    Fix avatar modal and delete modal layout per reviewer comments
+
+[33mcommit 9ccea92b4c1eff679368d3c980eaf8e4d42c40d7[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Sep 11 14:36:41 2025 -0400
+
+    Fix modal and subtitle styles according to Figma
+
+[33mcommit a7de73b50073f135501caa0ba018f368c7d15e2d[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Tue Sep 9 19:58:30 2025 -0400
+
+    Fix images and update avatar modal
+
+[33mcommit 36c0010d23e312fff64909b40fd696851e699d55[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Tue Sep 9 19:34:52 2025 -0400
+
+    Add normalize.css and update project files
+
+[33mcommit a5e1a1afb84cc7dd3afab779514527e8f87014d0[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Fri Sep 5 22:45:56 2025 -0400
+
+    project sprint 8
+
+[33mcommit 91d4ef9209dd04b40d440b3c016c55e19d9a36c8[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Aug 28 13:06:38 2025 -0400
+
+    Fourth Attempt
+
+[33mcommit ed367d879be5beafc56e66a24ef8b48fc7c509ff[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Wed Aug 27 23:28:14 2025 -0400
+
+    Third attempt with corrected form
+
+[33mcommit ee3bad1b9683f1d5e5d2bc877b7265c75740ea2e[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Wed Aug 27 13:30:27 2025 -0400
+
+    second attempt after correction
+
+[33mcommit eb32ab9d4a76aab55d191805edd7b5167d77eccc[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Tue Aug 26 20:08:31 2025 -0400
+
+    second Attempt
+
+[33mcommit b693b62341a64dfda880194cac0676a87545ecca[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Tue Aug 26 18:12:46 2025 -0400
+
+    first try
+
+[33mcommit 0b0ec3615f6a489dfca73e59725ecc2fbd071901[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Tue Aug 26 18:10:16 2025 -0400
+
+    First try
+
+[33mcommit 1d8e3dc891fec5a99dfbce1f33ece77374619054[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Tue Aug 26 15:25:56 2025 -0400
+
+    first attempt
+
+[33mcommit 5d59d79a13806b78703f5e5cd6314b468fb6bfb2[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Tue Aug 26 15:22:17 2025 -0400
+
+    Second Attempt
+
+[33mcommit e9bff125ae33fb0feeaee907091f87bfdab45532[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Fri Aug 22 23:03:23 2025 -0400
+
+    Save my file
+
+[33mcommit a0a5bc009954ec9cedebfe37c4bd496b4d9aac1e[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Wed Aug 20 14:52:44 2025 -0400
+
+    second attempt
+
+[33mcommit 4d37c556c61a82d21caa3ade389925701983827a[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Wed Aug 20 14:34:03 2025 -0400
+
+    Second attempt
+
+[33mcommit f8705278c786b45a6fdc3c7c7ca7afff3348a9d4[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Aug 14 19:31:45 2025 -0400
+
+    second attempt
+
+[33mcommit ae7c40edfc898129251ed49cdca5f598fb27d9e4[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Aug 14 19:25:48 2025 -0400
+
+    first attempt
+
+[33mcommit c0195fa876dc2cae9d2d6e200249d560aaf7fd4e[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Aug 14 11:29:28 2025 -0400
+
+    Uncommented done
+
+[33mcommit e38ab3f1508cda3ad0dded0f6eb35c166bef1a0b[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Wed Aug 13 18:42:23 2025 -0400
+
+    Corrected one
+
+[33mcommit b0ce212778e1bc0b6defbd9a2556cd64d4770e7b[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Tue Aug 12 14:01:18 2025 -0400
+
+    Second attempt
+
+[33mcommit 832e87fe7281d6f462bcce0de492c6019509fe90[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Mon Aug 11 19:40:31 2025 -0400
+
+    First attempt
+
+[33mcommit 69677042844b6447e07b7a194d8c9ede190d67d0[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Sat Aug 9 17:00:48 2025 -0400
+
+    spots javascript
+
+[33mcommit 668d04a0e93b8d4e4666fc487752c404fb7cbfe2[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Fri Aug 8 18:13:33 2025 -0400
+
+    corrected the Js and the desired modal.css again
+
+[33mcommit 6f9df7b8f71a819a6c8e6958958c16448f39b811[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Fri Aug 8 12:45:11 2025 -0400
+
+    corrected and imported the index.js file
+
+[33mcommit 4be9110bc29220cfc503138ba3b34c5aaf2d7f4a[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Aug 7 22:23:53 2025 -0400
+
+    made changes to the script agin
+
+[33mcommit 96cd08b32696163e2cafdc3225b36a3f2a60859b[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Aug 7 22:21:23 2025 -0400
+
+    added index.js to the script file
+
+[33mcommit 6fc3cd4ded085afc4a33a752e5a850165d4d570a[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Aug 7 22:16:29 2025 -0400
+
+    added modal.js to script
+
+[33mcommit babe3b79a4c78a5d0ea14b6821e00e9d527f0047[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Thu Aug 7 21:08:39 2025 -0400
+
+    New post and Edit profile modal
+
+[33mcommit 51fa5f88dfb2afdef2ae05f08fddfe7b17544d00[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Mon Aug 4 16:12:14 2025 -0400
+
+    third attempt
+
+[33mcommit 146157c90def6f039114aee08ec40c74a39d7a8b[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Fri Aug 1 18:46:26 2025 -0400
+
+    second attemp
+
+[33mcommit c080c583582cd7be7c0fbf7649a2687f8a21c856[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Fri Aug 1 10:39:07 2025 -0400
+
+    fixed ones
+
+[33mcommit 73d0ffe7aa1c5bd2d8c882b0df563dd056550b31[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Fri Aug 1 10:28:09 2025 -0400
+
+    Set media query
+
+[33mcommit e0eb92d4a9737680f8246bb424dfb493eb6991d7[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Sun Jul 27 18:24:08 2025 -0400
+
+    Project3
+
+[33mcommit 5493dfe568ec337b42a7786ddff9afa6089cf8e4[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Sun Jul 27 18:20:33 2025 -0400
+
+    Project 3
+
+[33mcommit a03bf3b70000cf8146d923c1c1d9fedeeb9ef8e1[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Sun Jul 27 18:16:55 2025 -0400
+
+    Project3
+
+[33mcommit 7bc2cad0b7457be35d4a7bb615729da80c22170d[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Sun Jul 27 18:12:14 2025 -0400
+
+    Project3
+
+[33mcommit 1143a922102903929372b1693ea5e340ba8bf2da[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Sun Jul 27 17:56:50 2025 -0400
+
+    Project3
+
+[33mcommit 5fd45cb596e2919d64edf2485a1f82799ef734ca[m
+Author: Farra <farhatchoudhary2@gmail.com>
+Date:   Sun Jul 27 17:47:59 2025 -0400
+
+    project3
+
+[33mcommit 907ad14f9e6784890c6202b34cc230c2933893d3[m
+Author: Farhatchowdhary <farhatchoudhary2@gmail.com>
+Date:   Wed Jul 23 15:19:05 2025 -0400
+
+    Initial commit
