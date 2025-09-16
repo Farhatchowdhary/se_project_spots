@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentUserId = null;
 
-// --- Load User Info & Cards ---
+// --- Load User Info & Cards (safe) ---
 Promise.all([api.getUserInfo(), api.getInitialCards()])
   .then(([user, cards]) => {
     currentUserId = user._id;
@@ -50,6 +50,11 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
     profileSubtitle.textContent = user.about;
     profileAvatar.src = user.avatar;
 
+    
+
+    // clear old cards
+    cardsList.innerHTML = '';
+
     // render cards
     cards.forEach(cardData => {
       const cardElement = createCard({
@@ -57,10 +62,10 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
         owner: { _id: cardData.owner._id },
         likes: cardData.likes
       });
-      cardsList.append(cardElement);
+      if (cardElement) cardsList.append(cardElement);
     });
   })
-  .catch(err => console.log(err));
+  .catch(err => console.log("Error loading user info or cards:", err));
 
 
 
@@ -117,69 +122,92 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
     if (e.target === deleteConfirmModal) closeDeleteModal();
   });
 
-  deleteConfirmBtn.addEventListener("click", () => {
-    if (!cardToDelete) return;
-    const cardId = cardToDelete.dataset.id;
-    api.deleteCard(cardId)
-      .then(() => {
-        cardToDelete.remove();
-        closeDeleteModal();
-      })
-      .catch(err => console.log(err));
-  });
+  deleteConfirmBtn.addEventListener("click", async () => {
+  if (!cardToDelete) return;
+
+  const cardId = cardToDelete.dataset.id;
+  const originalText = deleteConfirmBtn.textContent;
+
+  // Show "Deleting..." and disable button
+  deleteConfirmBtn.textContent = "Deleting...";
+  deleteConfirmBtn.disabled = true;
+
+  try {
+    await api.deleteCard(cardId); // wait for API to complete
+    cardToDelete.remove();
+    closeDeleteModal();
+  } catch (err) {
+    console.log(err);
+  } finally {
+    // Restore button text and enable
+    deleteConfirmBtn.textContent = originalText;
+    deleteConfirmBtn.disabled = false;
+  }
+});
+
+
 
   // --- Card Template ---
   const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 
   function createCard(data) {
-    const card = cardTemplate.cloneNode(true);
-    const title = card.querySelector(".card__title");
-    const img = card.querySelector(".card__image");
-    const likeBtn = card.querySelector(".card__like-button");
-    const deleteBtn = card.querySelector(".card__delete-button");
-    const likeCount = card.querySelector(".card__like-count");
+  const card = cardTemplate.cloneNode(true);
 
-    title.textContent = data.name;
-    img.src = data.link;
-    img.alt = data.name;
-    // likeCount.textContent = data.likes.length;
+  const title = card.querySelector(".card__title");
+  const img = card.querySelector(".card__image");
+  const likeBtn = card.querySelector(".card__like-button");
+  const deleteBtn = card.querySelector(".card__delete-button");
+  const likeCount = card.querySelector(".card__like-count");
 
-    if (data.likes.some(like => like._id === currentUserId)) {
-      likeBtn.classList.add("card__like-button_active");
-    }
+  // Set card content
+  title.textContent = data.name || "No title";
+  img.src = data.link || "#";
+  img.alt = data.name || "Card image";
 
-    likeBtn.addEventListener("click", () => {
-      const isLiked = likeBtn.classList.contains("card__like-button_active");
-      const request = isLiked ? api.unlikeCard(data._id) : api.likeCard(data._id);
-      request
-        .then(updated => {
-          likeBtn.classList.toggle("card__like-button_active");
-          // likeCount.textContent = updated.likes.length;
-        })
-        .catch(err => console.log(err));
-    });
+  // Handle likes safely
+  const likesArray = Array.isArray(data.likes) ? data.likes : [];
+  likeCount.textContent = likesArray.length;
 
-    card.dataset.id = data._id;
-
-    if (data.owner && data.owner._id === currentUserId) {
-      deleteBtn.addEventListener("click", () => openDeleteModal(card));
-    } else {
-      deleteBtn.style.display = "none";
-    }
-
-    // Image modal
-    const imageModal = document.getElementById("imagePreviewModal");
-    const modalImage = imageModal.querySelector(".modal__image");
-    const modalCaption = imageModal.querySelector(".modal__caption");
-    img.addEventListener("click", () => {
-      modalImage.src = data.link;
-      modalImage.alt = data.name;
-      modalCaption.textContent = data.name;
-      openModal(imageModal);
-    });
-
-    return card;
+  if (likesArray.some(like => like._id === currentUserId)) {
+    likeBtn.classList.add("card__like-button_active");
   }
+
+  likeBtn.addEventListener("click", () => {
+    const isLiked = likeBtn.classList.contains("card__like-button_active");
+    const request = isLiked ? api.unlikeCard(data._id) : api.likeCard(data._id);
+
+    request
+      .then(updated => {
+        likeBtn.classList.toggle("card__like-button_active");
+        likeCount.textContent = Array.isArray(updated.likes) ? updated.likes.length : 0;
+      })
+      .catch(err => console.log(err));
+  });
+
+  card.dataset.id = data._id;
+
+  // Handle delete button
+  if (data.owner && data.owner._id === currentUserId) {
+    deleteBtn.addEventListener("click", () => openDeleteModal(card));
+  } else {
+    deleteBtn.style.display = "none";
+  }
+
+  // Image modal
+  const imageModal = document.getElementById("imagePreviewModal");
+  const modalImage = imageModal.querySelector(".modal__image");
+  const modalCaption = imageModal.querySelector(".modal__caption");
+
+  img.addEventListener("click", () => {
+    modalImage.src = data.link || "#";
+    modalImage.alt = data.name || "Card image";
+    modalCaption.textContent = data.name || "No title";
+    openModal(imageModal);
+  });
+
+  return card;
+}
+
 
   // --- Profile Edit ---
   function wait(ms) {

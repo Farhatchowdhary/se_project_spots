@@ -63,7 +63,7 @@
 .modal__title {
   gap: 421px;
   color: #212121;
-  max-width: 169px;
+  /* max-width: 169px; */
   max-height: 32px;
   font-weight: 500;
   font-style: normal;
@@ -191,7 +191,7 @@
 .modal__title {
   gap: 421px;
   color: #212121;
-  max-width: 169px;
+  /* max-width: 169px; */
   max-height: 32px;
   font-weight: 500;
   top: 236px;

@@ -76,13 +76,13 @@
 
 
 #deleteConfirmModal .modal__cancel {
-  order: 1;
+  order: 2;
   background-color: #212121;
   color: #fff;
 }
 
 #deleteConfirmModal .modal__delete-confirm {
-  order: 2;
+  order: 1;
   background-color: #FF3333;
   color: #fff;
 }
