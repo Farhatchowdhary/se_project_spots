@@ -150,43 +150,41 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
   // --- Card Template ---
   const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 
-  function createCard(data) {
+function createCard(data) {
   const card = cardTemplate.cloneNode(true);
 
   const title = card.querySelector(".card__title");
   const img = card.querySelector(".card__image");
   const likeBtn = card.querySelector(".card__like-button");
   const deleteBtn = card.querySelector(".card__delete-button");
-  const likeCount = card.querySelector(".card__like-count");
 
   // Set card content
   title.textContent = data.name || "No title";
   img.src = data.link || "#";
   img.alt = data.name || "Card image";
 
-  // Handle likes safely
+  // Check if current user liked the card
   const likesArray = Array.isArray(data.likes) ? data.likes : [];
-  likeCount.textContent = likesArray.length;
-
-  if (likesArray.some(like => like._id === currentUserId)) {
+  if (likesArray.some(user => user._id === currentUserId)) {
     likeBtn.classList.add("card__like-button_active");
   }
 
+  // Like button click
   likeBtn.addEventListener("click", () => {
     const isLiked = likeBtn.classList.contains("card__like-button_active");
     const request = isLiked ? api.unlikeCard(data._id) : api.likeCard(data._id);
 
     request
-      .then(updated => {
+      .then(updatedCard => {
+        // toggle like
         likeBtn.classList.toggle("card__like-button_active");
-        likeCount.textContent = Array.isArray(updated.likes) ? updated.likes.length : 0;
+        // optional: update likes count if you want
+        // card.querySelector(".card__like-count").textContent = updatedCard.likes.length;
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log("Error toggling like:", err));
   });
 
-  card.dataset.id = data._id;
-
-  // Handle delete button
+  // Delete button (only owner)
   if (data.owner && data.owner._id === currentUserId) {
     deleteBtn.addEventListener("click", () => openDeleteModal(card));
   } else {
@@ -204,6 +202,9 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
     modalCaption.textContent = data.name || "No title";
     openModal(imageModal);
   });
+
+  // Store card ID
+  card.dataset.id = data._id;
 
   return card;
 }
@@ -273,22 +274,36 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
     );
   });
 
-  postForm.addEventListener("submit", e => {
-    e.preventDefault();
-    const name = postForm.querySelector("#caption").value;
-    const link = postForm.querySelector("#image").value;
+ postForm.addEventListener("submit", e => {
+  e.preventDefault();
 
-    handleFormSubmit(postForm, () =>
-      api.addCard({ name, link })
-        .then(newCard => {
-          const cardElement = createCard({ ...newCard, owner: { _id: currentUserId }, likes: [] });
-          cardsList.prepend(cardElement);
-          postForm.reset();
-          closeModal(postModal);
-        })
-    );
-  });
+  const name = postForm.querySelector("#caption").value.trim();
+  const link = postForm.querySelector("#image").value.trim();
 
+  if (!name || !link) return;
+
+  const saveBtn = postForm.querySelector(".modal__save-button");
+  const originalText = saveBtn.textContent;
+  saveBtn.textContent = "Saving...";
+  saveBtn.disabled = true;
+
+  api.addCard({ name, link })
+    .then(newCard => {
+      const cardElement = createCard({
+        ...newCard,
+        owner: { _id: currentUserId },
+        likes: newCard.likes || []
+      });
+      cardsList.prepend(cardElement);
+      closeModal(postModal);
+      postForm.reset();
+    })
+    .catch(err => console.log("Error adding new card:", err))
+    .finally(() => {
+      saveBtn.textContent = originalText;
+      saveBtn.disabled = false;
+    });
+});
 
 
 
